@@ -17,10 +17,15 @@ class Donation(ARC4Contract):
         self.total_donations = 0
         self.target = target
         self.campaign_active = status
-        
+
     @abimethod()
     def toggle_campaign(self, status: bool) -> None:
         assert Txn.sender == self.creator_address
         self.campaign_active = status
+
+    @abimethod()
+    def get_campaign_details(self) -> tuple[Account, BigUInt, BigUInt, bool]:
+        return self.creator_address, self.total_donations, self.target, self.campaign_active
+
 
 
