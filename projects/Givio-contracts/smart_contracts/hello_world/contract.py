@@ -60,4 +60,10 @@ class Donation(ARC4Contract):
     def get_remaining_target(self) -> BigUInt:
         return self.target - self.total_donations
 
+    @abimethod
+    def update_details(self, target: BigUInt, wallet: Account) -> None:
+        assert Txn.sender == self.creator_address
+        self.creator_address = wallet
+        self.target = target
+
 
