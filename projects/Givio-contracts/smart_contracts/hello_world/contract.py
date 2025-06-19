@@ -66,4 +66,14 @@ class Donation(ARC4Contract):
         self.creator_address = wallet
         self.target = target
 
+    
+    @abimethod(allow_actions=["DeleteApplication"])
+    def delete(self) -> None:
+        assert Txn.sender == self.creator_address
 
+        itxn.Payment(
+            receiver= self.creator_address,
+            amount = 0,
+            close_remainder_to= self.creator_address,
+            fee= 1_000,
+        ).submit()
