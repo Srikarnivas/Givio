@@ -1,0 +1,19 @@
+from email.headerregistry import Address
+from algopy import *
+from algopy.arc4 import abimethod
+
+
+
+class Donation(ARC4Contract):
+    creator_address : Account
+    total_donations : BigUInt
+    target : BigUInt
+    campaign_active: bool
+
+    @abimethod(allow_actions=["NoOp"], create="require")
+    def create(self, target: BigUInt, status: bool) -> None:
+        assert target > 0
+        self.creator_address = Txn.sender
+        self.total_donations = 0
+        self.target = target
+        self.campaign_active = status
