@@ -46,4 +46,13 @@ class Donation(ARC4Contract):
     def get_total_donations(self) -> BigUInt:
         return self.total_donations
     
+    @abimethod()
+    def withdraw(self, amount: BigUInt) -> None:
+        assert self.creator_address == Txn.sender
+        assert self.total_donations >= amount
+        itxn.Payment(
+            amount = amount,
+            receiver= self.creator_address,
+            fee = 0
+        ).submit()
 
