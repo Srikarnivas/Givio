@@ -32,5 +32,14 @@ class Donation(ARC4Contract):
     def is_target_reached(self) -> bool:
         return self.total_donations == self.target
 
+    @abimethod()
+    def donate(self, donateTxn: gtxn.PaymentTransaction ) -> None:
+        assert self.campaign_active
+        assert donateTxn.sender == Txn.sender
+        assert donateTxn.receiver == Global.current_application_address
+        assert donateTxn.amount > 0
+        assert self.total_donations+donateTxn.amount <= self.target
+
+        self.total_donations += donateTxn.amount
 
 
