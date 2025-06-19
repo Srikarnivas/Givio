@@ -55,4 +55,9 @@ class Donation(ARC4Contract):
             receiver= self.creator_address,
             fee = 0
         ).submit()
+        
+    @abimethod()
+    def get_remaining_target(self) -> BigUInt:
+        return self.target - self.total_donations
+
 
