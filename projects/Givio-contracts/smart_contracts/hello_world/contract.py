@@ -42,4 +42,8 @@ class Donation(ARC4Contract):
 
         self.total_donations += donateTxn.amount
 
+    @abimethod()
+    def get_total_donations(self) -> BigUInt:
+        return self.total_donations
+    
 
