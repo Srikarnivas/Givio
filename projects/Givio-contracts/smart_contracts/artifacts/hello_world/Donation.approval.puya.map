@@ -1,0 +1,3146 @@
+{
+  "version": 3,
+  "sources": [
+    "../../hello_world/contract.py"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAKA;;AAAA;;;AAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;;;AAAA;;;;;;;;;;;;;;;;;;;;;;AAAA;;AA8DK;;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;;AANA;;AAAA;AAAA;AAAA;;AAAA;AAxDL;;;AAAA;;;AAAA;AAAA;;AAwDK;;;AAAA;;AALA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAVA;;AAAA;AAAA;AAAA;;AAAA;AAzCL;;;AAAA;AAyCK;;;AAAA;;AAJA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAVA;;AAAA;AAAA;AAAA;;AAAA;AA3BL;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AA2BK;;;AAAA;;AAJA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;;;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAJA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;;AAAA;AAAA;;;AAAA;AAAA;;AAAA;AAAA;;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AALA;;AAAA;AAAA;AAAA;;AAAA;AAdL;;;;AAAA;AAcK;;;AAAA;;AARA;;AAAA;AAAA;AAAA;;AAAA;AAAA;AANL;;;AAAA;;;;AAAA;AAMK;;;AAAA;;AAAL;;;AAEe;;AAAS;;AAAT;AAAP;AACA;AAAuB;;AAAvB;AACA;AAAuB;;AAAvB;AACA;AAAA;;AAAA;AACA;;AAAA;;AAAA;;AAER;;;AAEe;;AAAc;AAAA;AAAA;AAAA;AAAd;AAAP;AACA;;AAAA;;AAAA;;AAIO;AAAA;AAAA;AAAA;AAAsB;AAAA;AAAA;AAAA;AAAsB;AAAA;AAAA;AAAA;AAAa;AAAA;;AAAA;AAAA;AAAhE;AAIO;AAAA;AAAA;AAAA;AAAwB;AAAA;AAAA;AAAA;AAAxB;AAAP;AAER;;;AAEe;AAAA;;AAAA;AAAA;AAAP;AACO;;AAAA;;AAAoB;;AAApB;AAAP;AACO;;AAAA;;AAAsB;;AAAtB;AAAP;AACO;;AAAA;;AAAP;AAAA;AACO;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAyC;AAAA;AAAA;AAAA;AAAzC;;AAAA;AAAP;AAEA;AAAA;AAAA;;AAIO;AAAA;AAAA;AAAA;AAAP;AAER;;;AAEe;AAAA;AAAA;AAAA;AAAA;AAAwB;;AAAxB;AAAP;AACO;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAP;AACA;;;;;;;AAAA;;;AAGU;;;AAHV;;AAQO;AAAA;AAAA;AAAA;AAAc;AAAA;AAAA;AAAA;AAAd;AAAP;AAGR;;;AAEe;;AAAc;AAAA;AAAA;AAAA;AAAd;AAAP;AACA;AAAA;;AAAA;AACA;AAAA;;AAAA;;AAIO;;AAAc;AAAA;AAAA;AAAA;AAAd;AAAA;;AAAA;AAAP;AAEA;;;;AAEa;;;;;AAFb;;;AAIS;;;;;AAJT;",
+  "op_pc_offset": 0,
+  "pc_events": {
+    "1": {
+      "subroutine": "algopy.arc4.ARC4Contract.approval_program",
+      "params": {},
+      "block": "main",
+      "stack_in": [],
+      "op": "intcblock 0 1 64"
+    },
+    "6": {
+      "op": "bytecblock \"total_donations\" \"creator_address\" \"target\" 0x151f7c75 \"campaign_active\""
+    },
+    "68": {
+      "op": "txn NumAppArgs",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "70": {
+      "op": "bz main_after_if_else@16",
+      "stack_out": []
+    },
+    "73": {
+      "op": "pushbytess 0xbd7b22b6 0x18ab923b 0x313f7889 0xc96047fc 0xeb286421 0x818b17a9 0x21f1ddff 0x756cbd69 0x05713d80 0x24378d3c // method \"create(uint512,bool)void\", method \"toggle_campaign(bool)void\", method \"get_campaign_details()(address,uint512,uint512,bool)\", method \"is_target_reached()bool\", method \"donate(pay)void\", method \"get_total_donations()uint512\", method \"withdraw(uint64)void\", method \"get_remaining_target()uint512\", method \"update_details(uint512,account)void\", method \"delete()void\"",
+      "defined_out": [
+        "Method(create(uint512,bool)void)",
+        "Method(delete()void)",
+        "Method(donate(pay)void)",
+        "Method(get_campaign_details()(address,uint512,uint512,bool))",
+        "Method(get_remaining_target()uint512)",
+        "Method(get_total_donations()uint512)",
+        "Method(is_target_reached()bool)",
+        "Method(toggle_campaign(bool)void)",
+        "Method(update_details(uint512,account)void)",
+        "Method(withdraw(uint64)void)"
+      ],
+      "stack_out": [
+        "Method(create(uint512,bool)void)",
+        "Method(toggle_campaign(bool)void)",
+        "Method(get_campaign_details()(address,uint512,uint512,bool))",
+        "Method(is_target_reached()bool)",
+        "Method(donate(pay)void)",
+        "Method(get_total_donations()uint512)",
+        "Method(withdraw(uint64)void)",
+        "Method(get_remaining_target()uint512)",
+        "Method(update_details(uint512,account)void)",
+        "Method(delete()void)"
+      ]
+    },
+    "125": {
+      "op": "txna ApplicationArgs 0",
+      "defined_out": [
+        "Method(create(uint512,bool)void)",
+        "Method(delete()void)",
+        "Method(donate(pay)void)",
+        "Method(get_campaign_details()(address,uint512,uint512,bool))",
+        "Method(get_remaining_target()uint512)",
+        "Method(get_total_donations()uint512)",
+        "Method(is_target_reached()bool)",
+        "Method(toggle_campaign(bool)void)",
+        "Method(update_details(uint512,account)void)",
+        "Method(withdraw(uint64)void)",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "Method(create(uint512,bool)void)",
+        "Method(toggle_campaign(bool)void)",
+        "Method(get_campaign_details()(address,uint512,uint512,bool))",
+        "Method(is_target_reached()bool)",
+        "Method(donate(pay)void)",
+        "Method(get_total_donations()uint512)",
+        "Method(withdraw(uint64)void)",
+        "Method(get_remaining_target()uint512)",
+        "Method(update_details(uint512,account)void)",
+        "Method(delete()void)",
+        "tmp%2#0"
+      ]
+    },
+    "128": {
+      "op": "match main_create_route@3 main_toggle_campaign_route@4 main_get_campaign_details_route@5 main_is_target_reached_route@6 main_donate_route@7 main_get_total_donations_route@8 main_withdraw_route@9 main_get_remaining_target_route@10 main_update_details_route@11 main_delete_route@12",
+      "stack_out": []
+    },
+    "150": {
+      "block": "main_after_if_else@16",
+      "stack_in": [],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "151": {
+      "op": "return",
+      "stack_out": []
+    },
+    "152": {
+      "block": "main_delete_route@12",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%49#0"
+      ],
+      "stack_out": [
+        "tmp%49#0"
+      ]
+    },
+    "154": {
+      "op": "pushint 5 // DeleteApplication",
+      "defined_out": [
+        "DeleteApplication",
+        "tmp%49#0"
+      ],
+      "stack_out": [
+        "tmp%49#0",
+        "DeleteApplication"
+      ]
+    },
+    "156": {
+      "op": "==",
+      "defined_out": [
+        "tmp%50#0"
+      ],
+      "stack_out": [
+        "tmp%50#0"
+      ]
+    },
+    "157": {
+      "error": "OnCompletion is not DeleteApplication",
+      "op": "assert // OnCompletion is not DeleteApplication",
+      "stack_out": []
+    },
+    "158": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%51#0"
+      ],
+      "stack_out": [
+        "tmp%51#0"
+      ]
+    },
+    "160": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "161": {
+      "callsub": "smart_contracts.hello_world.contract.Donation.delete",
+      "op": "callsub delete"
+    },
+    "164": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "165": {
+      "op": "return",
+      "stack_out": []
+    },
+    "166": {
+      "block": "main_update_details_route@11",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%43#0"
+      ],
+      "stack_out": [
+        "tmp%43#0"
+      ]
+    },
+    "168": {
+      "op": "!",
+      "defined_out": [
+        "tmp%44#0"
+      ],
+      "stack_out": [
+        "tmp%44#0"
+      ]
+    },
+    "169": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "170": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%45#0"
+      ],
+      "stack_out": [
+        "tmp%45#0"
+      ]
+    },
+    "172": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "173": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "reinterpret_bytes[64]%1#0"
+      ],
+      "stack_out": [
+        "reinterpret_bytes[64]%1#0"
+      ]
+    },
+    "176": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "reinterpret_bytes[1]%2#0",
+        "reinterpret_bytes[64]%1#0"
+      ],
+      "stack_out": [
+        "reinterpret_bytes[64]%1#0",
+        "reinterpret_bytes[1]%2#0"
+      ]
+    },
+    "179": {
+      "op": "btoi",
+      "defined_out": [
+        "reinterpret_bytes[64]%1#0",
+        "tmp%47#0"
+      ],
+      "stack_out": [
+        "reinterpret_bytes[64]%1#0",
+        "tmp%47#0"
+      ]
+    },
+    "180": {
+      "op": "txnas Accounts",
+      "defined_out": [
+        "reinterpret_bytes[64]%1#0",
+        "tmp%48#0"
+      ],
+      "stack_out": [
+        "reinterpret_bytes[64]%1#0",
+        "tmp%48#0"
+      ]
+    },
+    "182": {
+      "callsub": "smart_contracts.hello_world.contract.Donation.update_details",
+      "op": "callsub update_details",
+      "stack_out": []
+    },
+    "185": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "186": {
+      "op": "return",
+      "stack_out": []
+    },
+    "187": {
+      "block": "main_get_remaining_target_route@10",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%38#0"
+      ],
+      "stack_out": [
+        "tmp%38#0"
+      ]
+    },
+    "189": {
+      "op": "!",
+      "defined_out": [
+        "tmp%39#0"
+      ],
+      "stack_out": [
+        "tmp%39#0"
+      ]
+    },
+    "190": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "191": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%40#0"
+      ],
+      "stack_out": [
+        "tmp%40#0"
+      ]
+    },
+    "193": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "194": {
+      "callsub": "smart_contracts.hello_world.contract.Donation.get_remaining_target",
+      "op": "callsub get_remaining_target",
+      "defined_out": [
+        "to_encode%2#0"
+      ],
+      "stack_out": [
+        "to_encode%2#0"
+      ]
+    },
+    "197": {
+      "op": "dup",
+      "defined_out": [
+        "to_encode%2#0",
+        "to_encode%2#0 (copy)"
+      ],
+      "stack_out": [
+        "to_encode%2#0",
+        "to_encode%2#0 (copy)"
+      ]
+    },
+    "198": {
+      "op": "len",
+      "defined_out": [
+        "to_encode%2#0",
+        "value_len%3#0"
+      ],
+      "stack_out": [
+        "to_encode%2#0",
+        "value_len%3#0"
+      ]
+    },
+    "199": {
+      "op": "intc_2 // 64",
+      "defined_out": [
+        "64",
+        "to_encode%2#0",
+        "value_len%3#0"
+      ],
+      "stack_out": [
+        "to_encode%2#0",
+        "value_len%3#0",
+        "64"
+      ]
+    },
+    "200": {
+      "op": "<=",
+      "defined_out": [
+        "len_ok%3#0",
+        "to_encode%2#0"
+      ],
+      "stack_out": [
+        "to_encode%2#0",
+        "len_ok%3#0"
+      ]
+    },
+    "201": {
+      "error": "overflow",
+      "op": "assert // overflow",
+      "stack_out": [
+        "to_encode%2#0"
+      ]
+    },
+    "202": {
+      "op": "intc_2 // 64",
+      "stack_out": [
+        "to_encode%2#0",
+        "64"
+      ]
+    },
+    "203": {
+      "op": "bzero",
+      "defined_out": [
+        "bzero%3#0",
+        "to_encode%2#0"
+      ],
+      "stack_out": [
+        "to_encode%2#0",
+        "bzero%3#0"
+      ]
+    },
+    "204": {
+      "op": "b|",
+      "defined_out": [
+        "arc4_encoded%3#0"
+      ],
+      "stack_out": [
+        "arc4_encoded%3#0"
+      ]
+    },
+    "205": {
+      "op": "bytec_3 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "arc4_encoded%3#0"
+      ],
+      "stack_out": [
+        "arc4_encoded%3#0",
+        "0x151f7c75"
+      ]
+    },
+    "206": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "arc4_encoded%3#0"
+      ]
+    },
+    "207": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%42#0"
+      ],
+      "stack_out": [
+        "tmp%42#0"
+      ]
+    },
+    "208": {
+      "op": "log",
+      "stack_out": []
+    },
+    "209": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "210": {
+      "op": "return",
+      "stack_out": []
+    },
+    "211": {
+      "block": "main_withdraw_route@9",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%33#0"
+      ],
+      "stack_out": [
+        "tmp%33#0"
+      ]
+    },
+    "213": {
+      "op": "!",
+      "defined_out": [
+        "tmp%34#0"
+      ],
+      "stack_out": [
+        "tmp%34#0"
+      ]
+    },
+    "214": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "215": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%35#0"
+      ],
+      "stack_out": [
+        "tmp%35#0"
+      ]
+    },
+    "217": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "218": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "reinterpret_bytes[8]%0#0"
+      ],
+      "stack_out": [
+        "reinterpret_bytes[8]%0#0"
+      ]
+    },
+    "221": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%37#0"
+      ],
+      "stack_out": [
+        "tmp%37#0"
+      ]
+    },
+    "222": {
+      "callsub": "smart_contracts.hello_world.contract.Donation.withdraw",
+      "op": "callsub withdraw",
+      "stack_out": []
+    },
+    "225": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "226": {
+      "op": "return",
+      "stack_out": []
+    },
+    "227": {
+      "block": "main_get_total_donations_route@8",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%28#0"
+      ],
+      "stack_out": [
+        "tmp%28#0"
+      ]
+    },
+    "229": {
+      "op": "!",
+      "defined_out": [
+        "tmp%29#0"
+      ],
+      "stack_out": [
+        "tmp%29#0"
+      ]
+    },
+    "230": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "231": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%30#0"
+      ],
+      "stack_out": [
+        "tmp%30#0"
+      ]
+    },
+    "233": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "234": {
+      "callsub": "smart_contracts.hello_world.contract.Donation.get_total_donations",
+      "op": "callsub get_total_donations",
+      "defined_out": [
+        "to_encode%1#0"
+      ],
+      "stack_out": [
+        "to_encode%1#0"
+      ]
+    },
+    "237": {
+      "op": "dup",
+      "defined_out": [
+        "to_encode%1#0",
+        "to_encode%1#0 (copy)"
+      ],
+      "stack_out": [
+        "to_encode%1#0",
+        "to_encode%1#0 (copy)"
+      ]
+    },
+    "238": {
+      "op": "len",
+      "defined_out": [
+        "to_encode%1#0",
+        "value_len%2#0"
+      ],
+      "stack_out": [
+        "to_encode%1#0",
+        "value_len%2#0"
+      ]
+    },
+    "239": {
+      "op": "intc_2 // 64",
+      "defined_out": [
+        "64",
+        "to_encode%1#0",
+        "value_len%2#0"
+      ],
+      "stack_out": [
+        "to_encode%1#0",
+        "value_len%2#0",
+        "64"
+      ]
+    },
+    "240": {
+      "op": "<=",
+      "defined_out": [
+        "len_ok%2#0",
+        "to_encode%1#0"
+      ],
+      "stack_out": [
+        "to_encode%1#0",
+        "len_ok%2#0"
+      ]
+    },
+    "241": {
+      "error": "overflow",
+      "op": "assert // overflow",
+      "stack_out": [
+        "to_encode%1#0"
+      ]
+    },
+    "242": {
+      "op": "intc_2 // 64",
+      "stack_out": [
+        "to_encode%1#0",
+        "64"
+      ]
+    },
+    "243": {
+      "op": "bzero",
+      "defined_out": [
+        "bzero%2#0",
+        "to_encode%1#0"
+      ],
+      "stack_out": [
+        "to_encode%1#0",
+        "bzero%2#0"
+      ]
+    },
+    "244": {
+      "op": "b|",
+      "defined_out": [
+        "arc4_encoded%2#0"
+      ],
+      "stack_out": [
+        "arc4_encoded%2#0"
+      ]
+    },
+    "245": {
+      "op": "bytec_3 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "arc4_encoded%2#0"
+      ],
+      "stack_out": [
+        "arc4_encoded%2#0",
+        "0x151f7c75"
+      ]
+    },
+    "246": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "arc4_encoded%2#0"
+      ]
+    },
+    "247": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%32#0"
+      ],
+      "stack_out": [
+        "tmp%32#0"
+      ]
+    },
+    "248": {
+      "op": "log",
+      "stack_out": []
+    },
+    "249": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "250": {
+      "op": "return",
+      "stack_out": []
+    },
+    "251": {
+      "block": "main_donate_route@7",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%23#0"
+      ],
+      "stack_out": [
+        "tmp%23#0"
+      ]
+    },
+    "253": {
+      "op": "!",
+      "defined_out": [
+        "tmp%24#0"
+      ],
+      "stack_out": [
+        "tmp%24#0"
+      ]
+    },
+    "254": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "255": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%25#0"
+      ],
+      "stack_out": [
+        "tmp%25#0"
+      ]
+    },
+    "257": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "258": {
+      "op": "txn GroupIndex",
+      "defined_out": [
+        "tmp%27#0"
+      ],
+      "stack_out": [
+        "tmp%27#0"
+      ]
+    },
+    "260": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1",
+        "tmp%27#0"
+      ],
+      "stack_out": [
+        "tmp%27#0",
+        "1"
+      ]
+    },
+    "261": {
+      "op": "-",
+      "defined_out": [
+        "gtxn_idx%0#0"
+      ],
+      "stack_out": [
+        "gtxn_idx%0#0"
+      ]
+    },
+    "262": {
+      "op": "dup",
+      "defined_out": [
+        "gtxn_idx%0#0",
+        "gtxn_idx%0#0 (copy)"
+      ],
+      "stack_out": [
+        "gtxn_idx%0#0",
+        "gtxn_idx%0#0 (copy)"
+      ]
+    },
+    "263": {
+      "op": "gtxns TypeEnum",
+      "defined_out": [
+        "gtxn_idx%0#0",
+        "gtxn_type%0#0"
+      ],
+      "stack_out": [
+        "gtxn_idx%0#0",
+        "gtxn_type%0#0"
+      ]
+    },
+    "265": {
+      "op": "intc_1 // pay",
+      "defined_out": [
+        "gtxn_idx%0#0",
+        "gtxn_type%0#0",
+        "pay"
+      ],
+      "stack_out": [
+        "gtxn_idx%0#0",
+        "gtxn_type%0#0",
+        "pay"
+      ]
+    },
+    "266": {
+      "op": "==",
+      "defined_out": [
+        "gtxn_idx%0#0",
+        "gtxn_type_matches%0#0"
+      ],
+      "stack_out": [
+        "gtxn_idx%0#0",
+        "gtxn_type_matches%0#0"
+      ]
+    },
+    "267": {
+      "error": "transaction type is pay",
+      "op": "assert // transaction type is pay",
+      "stack_out": [
+        "gtxn_idx%0#0"
+      ]
+    },
+    "268": {
+      "callsub": "smart_contracts.hello_world.contract.Donation.donate",
+      "op": "callsub donate",
+      "stack_out": []
+    },
+    "271": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "272": {
+      "op": "return",
+      "stack_out": []
+    },
+    "273": {
+      "block": "main_is_target_reached_route@6",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%18#0"
+      ],
+      "stack_out": [
+        "tmp%18#0"
+      ]
+    },
+    "275": {
+      "op": "!",
+      "defined_out": [
+        "tmp%19#0"
+      ],
+      "stack_out": [
+        "tmp%19#0"
+      ]
+    },
+    "276": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "277": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%20#0"
+      ],
+      "stack_out": [
+        "tmp%20#0"
+      ]
+    },
+    "279": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "280": {
+      "callsub": "smart_contracts.hello_world.contract.Donation.is_target_reached",
+      "op": "callsub is_target_reached",
+      "defined_out": [
+        "to_encode%0#0"
+      ],
+      "stack_out": [
+        "to_encode%0#0"
+      ]
+    },
+    "283": {
+      "op": "pushbytes 0x00",
+      "defined_out": [
+        "0x00",
+        "to_encode%0#0"
+      ],
+      "stack_out": [
+        "to_encode%0#0",
+        "0x00"
+      ]
+    },
+    "286": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "0x00",
+        "to_encode%0#0"
+      ],
+      "stack_out": [
+        "to_encode%0#0",
+        "0x00",
+        "0"
+      ]
+    },
+    "287": {
+      "op": "uncover 2",
+      "stack_out": [
+        "0x00",
+        "0",
+        "to_encode%0#0"
+      ]
+    },
+    "289": {
+      "op": "setbit",
+      "defined_out": [
+        "encoded_bool%1#0"
+      ],
+      "stack_out": [
+        "encoded_bool%1#0"
+      ]
+    },
+    "290": {
+      "op": "bytec_3 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "encoded_bool%1#0"
+      ],
+      "stack_out": [
+        "encoded_bool%1#0",
+        "0x151f7c75"
+      ]
+    },
+    "291": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "encoded_bool%1#0"
+      ]
+    },
+    "292": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%22#0"
+      ],
+      "stack_out": [
+        "tmp%22#0"
+      ]
+    },
+    "293": {
+      "op": "log",
+      "stack_out": []
+    },
+    "294": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "295": {
+      "op": "return",
+      "stack_out": []
+    },
+    "296": {
+      "block": "main_get_campaign_details_route@5",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%13#0"
+      ],
+      "stack_out": [
+        "tmp%13#0"
+      ]
+    },
+    "298": {
+      "op": "!",
+      "defined_out": [
+        "tmp%14#0"
+      ],
+      "stack_out": [
+        "tmp%14#0"
+      ]
+    },
+    "299": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "300": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%15#0"
+      ],
+      "stack_out": [
+        "tmp%15#0"
+      ]
+    },
+    "302": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "303": {
+      "callsub": "smart_contracts.hello_world.contract.Donation.get_campaign_details",
+      "op": "callsub get_campaign_details",
+      "defined_out": [
+        "elements_to_encode%0#0",
+        "elements_to_encode%1#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0"
+      ],
+      "stack_out": [
+        "elements_to_encode%0#0",
+        "elements_to_encode%1#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0"
+      ]
+    },
+    "306": {
+      "op": "dig 2",
+      "defined_out": [
+        "elements_to_encode%0#0",
+        "elements_to_encode%1#0",
+        "elements_to_encode%1#0 (copy)",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0"
+      ],
+      "stack_out": [
+        "elements_to_encode%0#0",
+        "elements_to_encode%1#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0",
+        "elements_to_encode%1#0 (copy)"
+      ]
+    },
+    "308": {
+      "op": "len",
+      "defined_out": [
+        "elements_to_encode%0#0",
+        "elements_to_encode%1#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0",
+        "value_len%0#0"
+      ],
+      "stack_out": [
+        "elements_to_encode%0#0",
+        "elements_to_encode%1#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0",
+        "value_len%0#0"
+      ]
+    },
+    "309": {
+      "op": "intc_2 // 64",
+      "defined_out": [
+        "64",
+        "elements_to_encode%0#0",
+        "elements_to_encode%1#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0",
+        "value_len%0#0"
+      ],
+      "stack_out": [
+        "elements_to_encode%0#0",
+        "elements_to_encode%1#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0",
+        "value_len%0#0",
+        "64"
+      ]
+    },
+    "310": {
+      "op": "<=",
+      "defined_out": [
+        "elements_to_encode%0#0",
+        "elements_to_encode%1#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0",
+        "len_ok%0#0"
+      ],
+      "stack_out": [
+        "elements_to_encode%0#0",
+        "elements_to_encode%1#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0",
+        "len_ok%0#0"
+      ]
+    },
+    "311": {
+      "error": "overflow",
+      "op": "assert // overflow",
+      "stack_out": [
+        "elements_to_encode%0#0",
+        "elements_to_encode%1#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0"
+      ]
+    },
+    "312": {
+      "op": "intc_2 // 64",
+      "stack_out": [
+        "elements_to_encode%0#0",
+        "elements_to_encode%1#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0",
+        "64"
+      ]
+    },
+    "313": {
+      "op": "bzero",
+      "defined_out": [
+        "bzero%0#0",
+        "elements_to_encode%0#0",
+        "elements_to_encode%1#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0"
+      ],
+      "stack_out": [
+        "elements_to_encode%0#0",
+        "elements_to_encode%1#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0",
+        "bzero%0#0"
+      ]
+    },
+    "314": {
+      "op": "uncover 3",
+      "stack_out": [
+        "elements_to_encode%0#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0",
+        "bzero%0#0",
+        "elements_to_encode%1#0"
+      ]
+    },
+    "316": {
+      "op": "dig 1",
+      "defined_out": [
+        "bzero%0#0",
+        "bzero%0#0 (copy)",
+        "elements_to_encode%0#0",
+        "elements_to_encode%1#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0"
+      ],
+      "stack_out": [
+        "elements_to_encode%0#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0",
+        "bzero%0#0",
+        "elements_to_encode%1#0",
+        "bzero%0#0 (copy)"
+      ]
+    },
+    "318": {
+      "op": "b|",
+      "defined_out": [
+        "arc4_encoded%0#0",
+        "bzero%0#0",
+        "elements_to_encode%0#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0"
+      ],
+      "stack_out": [
+        "elements_to_encode%0#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0",
+        "bzero%0#0",
+        "arc4_encoded%0#0"
+      ]
+    },
+    "319": {
+      "op": "dig 3",
+      "defined_out": [
+        "arc4_encoded%0#0",
+        "bzero%0#0",
+        "elements_to_encode%0#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%2#0 (copy)",
+        "elements_to_encode%3#0"
+      ],
+      "stack_out": [
+        "elements_to_encode%0#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0",
+        "bzero%0#0",
+        "arc4_encoded%0#0",
+        "elements_to_encode%2#0 (copy)"
+      ]
+    },
+    "321": {
+      "op": "len",
+      "defined_out": [
+        "arc4_encoded%0#0",
+        "bzero%0#0",
+        "elements_to_encode%0#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0",
+        "value_len%1#0"
+      ],
+      "stack_out": [
+        "elements_to_encode%0#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0",
+        "bzero%0#0",
+        "arc4_encoded%0#0",
+        "value_len%1#0"
+      ]
+    },
+    "322": {
+      "op": "intc_2 // 64",
+      "stack_out": [
+        "elements_to_encode%0#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0",
+        "bzero%0#0",
+        "arc4_encoded%0#0",
+        "value_len%1#0",
+        "64"
+      ]
+    },
+    "323": {
+      "op": "<=",
+      "defined_out": [
+        "arc4_encoded%0#0",
+        "bzero%0#0",
+        "elements_to_encode%0#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0",
+        "len_ok%1#0"
+      ],
+      "stack_out": [
+        "elements_to_encode%0#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0",
+        "bzero%0#0",
+        "arc4_encoded%0#0",
+        "len_ok%1#0"
+      ]
+    },
+    "324": {
+      "error": "overflow",
+      "op": "assert // overflow",
+      "stack_out": [
+        "elements_to_encode%0#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0",
+        "bzero%0#0",
+        "arc4_encoded%0#0"
+      ]
+    },
+    "325": {
+      "op": "uncover 3",
+      "stack_out": [
+        "elements_to_encode%0#0",
+        "elements_to_encode%3#0",
+        "bzero%0#0",
+        "arc4_encoded%0#0",
+        "elements_to_encode%2#0"
+      ]
+    },
+    "327": {
+      "op": "uncover 2",
+      "stack_out": [
+        "elements_to_encode%0#0",
+        "elements_to_encode%3#0",
+        "arc4_encoded%0#0",
+        "elements_to_encode%2#0",
+        "bzero%0#0"
+      ]
+    },
+    "329": {
+      "op": "b|",
+      "defined_out": [
+        "arc4_encoded%0#0",
+        "arc4_encoded%1#0",
+        "elements_to_encode%0#0",
+        "elements_to_encode%3#0"
+      ],
+      "stack_out": [
+        "elements_to_encode%0#0",
+        "elements_to_encode%3#0",
+        "arc4_encoded%0#0",
+        "arc4_encoded%1#0"
+      ]
+    },
+    "330": {
+      "op": "pushbytes 0x00",
+      "defined_out": [
+        "0x00",
+        "arc4_encoded%0#0",
+        "arc4_encoded%1#0",
+        "elements_to_encode%0#0",
+        "elements_to_encode%3#0"
+      ],
+      "stack_out": [
+        "elements_to_encode%0#0",
+        "elements_to_encode%3#0",
+        "arc4_encoded%0#0",
+        "arc4_encoded%1#0",
+        "0x00"
+      ]
+    },
+    "333": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "0x00",
+        "arc4_encoded%0#0",
+        "arc4_encoded%1#0",
+        "elements_to_encode%0#0",
+        "elements_to_encode%3#0"
+      ],
+      "stack_out": [
+        "elements_to_encode%0#0",
+        "elements_to_encode%3#0",
+        "arc4_encoded%0#0",
+        "arc4_encoded%1#0",
+        "0x00",
+        "0"
+      ]
+    },
+    "334": {
+      "op": "uncover 4",
+      "stack_out": [
+        "elements_to_encode%0#0",
+        "arc4_encoded%0#0",
+        "arc4_encoded%1#0",
+        "0x00",
+        "0",
+        "elements_to_encode%3#0"
+      ]
+    },
+    "336": {
+      "op": "setbit",
+      "defined_out": [
+        "arc4_encoded%0#0",
+        "arc4_encoded%1#0",
+        "elements_to_encode%0#0",
+        "encoded_bool%0#0"
+      ],
+      "stack_out": [
+        "elements_to_encode%0#0",
+        "arc4_encoded%0#0",
+        "arc4_encoded%1#0",
+        "encoded_bool%0#0"
+      ]
+    },
+    "337": {
+      "op": "uncover 3",
+      "stack_out": [
+        "arc4_encoded%0#0",
+        "arc4_encoded%1#0",
+        "encoded_bool%0#0",
+        "elements_to_encode%0#0"
+      ]
+    },
+    "339": {
+      "op": "uncover 3",
+      "stack_out": [
+        "arc4_encoded%1#0",
+        "encoded_bool%0#0",
+        "elements_to_encode%0#0",
+        "arc4_encoded%0#0"
+      ]
+    },
+    "341": {
+      "op": "concat",
+      "defined_out": [
+        "arc4_encoded%1#0",
+        "encoded_bool%0#0",
+        "encoded_tuple_buffer%2#0"
+      ],
+      "stack_out": [
+        "arc4_encoded%1#0",
+        "encoded_bool%0#0",
+        "encoded_tuple_buffer%2#0"
+      ]
+    },
+    "342": {
+      "op": "uncover 2",
+      "stack_out": [
+        "encoded_bool%0#0",
+        "encoded_tuple_buffer%2#0",
+        "arc4_encoded%1#0"
+      ]
+    },
+    "344": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_bool%0#0",
+        "encoded_tuple_buffer%3#0"
+      ],
+      "stack_out": [
+        "encoded_bool%0#0",
+        "encoded_tuple_buffer%3#0"
+      ]
+    },
+    "345": {
+      "op": "swap",
+      "stack_out": [
+        "encoded_tuple_buffer%3#0",
+        "encoded_bool%0#0"
+      ]
+    },
+    "346": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_tuple_buffer%4#0"
+      ],
+      "stack_out": [
+        "encoded_tuple_buffer%4#0"
+      ]
+    },
+    "347": {
+      "op": "bytec_3 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "encoded_tuple_buffer%4#0"
+      ],
+      "stack_out": [
+        "encoded_tuple_buffer%4#0",
+        "0x151f7c75"
+      ]
+    },
+    "348": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "encoded_tuple_buffer%4#0"
+      ]
+    },
+    "349": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%17#0"
+      ],
+      "stack_out": [
+        "tmp%17#0"
+      ]
+    },
+    "350": {
+      "op": "log",
+      "stack_out": []
+    },
+    "351": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "352": {
+      "op": "return",
+      "stack_out": []
+    },
+    "353": {
+      "block": "main_toggle_campaign_route@4",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%8#0"
+      ]
+    },
+    "355": {
+      "op": "!",
+      "defined_out": [
+        "tmp%9#0"
+      ],
+      "stack_out": [
+        "tmp%9#0"
+      ]
+    },
+    "356": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "357": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%10#0"
+      ],
+      "stack_out": [
+        "tmp%10#0"
+      ]
+    },
+    "359": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "360": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "reinterpret_bytes[1]%1#0"
+      ],
+      "stack_out": [
+        "reinterpret_bytes[1]%1#0"
+      ]
+    },
+    "363": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "reinterpret_bytes[1]%1#0"
+      ],
+      "stack_out": [
+        "reinterpret_bytes[1]%1#0",
+        "0"
+      ]
+    },
+    "364": {
+      "op": "getbit",
+      "defined_out": [
+        "tmp%12#0"
+      ],
+      "stack_out": [
+        "tmp%12#0"
+      ]
+    },
+    "365": {
+      "callsub": "smart_contracts.hello_world.contract.Donation.toggle_campaign",
+      "op": "callsub toggle_campaign",
+      "stack_out": []
+    },
+    "368": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "369": {
+      "op": "return",
+      "stack_out": []
+    },
+    "370": {
+      "block": "main_create_route@3",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%3#0"
+      ]
+    },
+    "372": {
+      "op": "!",
+      "defined_out": [
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%4#0"
+      ]
+    },
+    "373": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "374": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tmp%5#0"
+      ]
+    },
+    "376": {
+      "op": "!",
+      "defined_out": [
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "tmp%6#0"
+      ]
+    },
+    "377": {
+      "error": "can only call when creating",
+      "op": "assert // can only call when creating",
+      "stack_out": []
+    },
+    "378": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "reinterpret_bytes[64]%0#0"
+      ],
+      "stack_out": [
+        "reinterpret_bytes[64]%0#0"
+      ]
+    },
+    "381": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "reinterpret_bytes[1]%0#0",
+        "reinterpret_bytes[64]%0#0"
+      ],
+      "stack_out": [
+        "reinterpret_bytes[64]%0#0",
+        "reinterpret_bytes[1]%0#0"
+      ]
+    },
+    "384": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "reinterpret_bytes[1]%0#0",
+        "reinterpret_bytes[64]%0#0"
+      ],
+      "stack_out": [
+        "reinterpret_bytes[64]%0#0",
+        "reinterpret_bytes[1]%0#0",
+        "0"
+      ]
+    },
+    "385": {
+      "op": "getbit",
+      "defined_out": [
+        "reinterpret_bytes[64]%0#0",
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "reinterpret_bytes[64]%0#0",
+        "tmp%7#0"
+      ]
+    },
+    "386": {
+      "callsub": "smart_contracts.hello_world.contract.Donation.create",
+      "op": "callsub create",
+      "stack_out": []
+    },
+    "389": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "390": {
+      "op": "return",
+      "stack_out": []
+    },
+    "391": {
+      "subroutine": "smart_contracts.hello_world.contract.Donation.create",
+      "params": {
+        "target#0": "bytes",
+        "status#0": "uint64"
+      },
+      "block": "create",
+      "stack_in": [],
+      "op": "proto 2 0"
+    },
+    "394": {
+      "op": "frame_dig -2",
+      "defined_out": [
+        "target#0 (copy)"
+      ],
+      "stack_out": [
+        "target#0 (copy)"
+      ]
+    },
+    "396": {
+      "op": "pushbytes 0x",
+      "defined_out": [
+        "0x",
+        "target#0 (copy)"
+      ],
+      "stack_out": [
+        "target#0 (copy)",
+        "0x"
+      ]
+    },
+    "398": {
+      "op": "b>",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "399": {
+      "op": "assert",
+      "stack_out": []
+    },
+    "400": {
+      "op": "bytec_1 // \"creator_address\"",
+      "defined_out": [
+        "\"creator_address\""
+      ],
+      "stack_out": [
+        "\"creator_address\""
+      ]
+    },
+    "401": {
+      "op": "txn Sender",
+      "defined_out": [
+        "\"creator_address\"",
+        "materialized_values%0#0"
+      ],
+      "stack_out": [
+        "\"creator_address\"",
+        "materialized_values%0#0"
+      ]
+    },
+    "403": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "404": {
+      "op": "bytec_0 // \"total_donations\"",
+      "defined_out": [
+        "\"total_donations\""
+      ],
+      "stack_out": [
+        "\"total_donations\""
+      ]
+    },
+    "405": {
+      "op": "pushbytes 0x",
+      "stack_out": [
+        "\"total_donations\"",
+        "0x"
+      ]
+    },
+    "407": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "408": {
+      "op": "bytec_2 // \"target\"",
+      "defined_out": [
+        "\"target\""
+      ],
+      "stack_out": [
+        "\"target\""
+      ]
+    },
+    "409": {
+      "op": "frame_dig -2",
+      "stack_out": [
+        "\"target\"",
+        "target#0 (copy)"
+      ]
+    },
+    "411": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "412": {
+      "op": "bytec 4 // \"campaign_active\"",
+      "defined_out": [
+        "\"campaign_active\""
+      ],
+      "stack_out": [
+        "\"campaign_active\""
+      ]
+    },
+    "414": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "\"campaign_active\"",
+        "status#0 (copy)"
+      ],
+      "stack_out": [
+        "\"campaign_active\"",
+        "status#0 (copy)"
+      ]
+    },
+    "416": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "417": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "418": {
+      "subroutine": "smart_contracts.hello_world.contract.Donation.toggle_campaign",
+      "params": {
+        "status#0": "uint64"
+      },
+      "block": "toggle_campaign",
+      "stack_in": [],
+      "op": "proto 1 0"
+    },
+    "421": {
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "423": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0"
+      ]
+    },
+    "424": {
+      "op": "bytec_1 // \"creator_address\"",
+      "defined_out": [
+        "\"creator_address\"",
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0",
+        "\"creator_address\""
+      ]
+    },
+    "425": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "426": {
+      "error": "check self.creator_address exists",
+      "op": "assert // check self.creator_address exists",
+      "stack_out": [
+        "tmp%0#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "427": {
+      "op": "==",
+      "defined_out": [
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%1#0"
+      ]
+    },
+    "428": {
+      "op": "assert",
+      "stack_out": []
+    },
+    "429": {
+      "op": "bytec 4 // \"campaign_active\"",
+      "defined_out": [
+        "\"campaign_active\""
+      ],
+      "stack_out": [
+        "\"campaign_active\""
+      ]
+    },
+    "431": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "\"campaign_active\"",
+        "status#0 (copy)"
+      ],
+      "stack_out": [
+        "\"campaign_active\"",
+        "status#0 (copy)"
+      ]
+    },
+    "433": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "434": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "435": {
+      "subroutine": "smart_contracts.hello_world.contract.Donation.get_campaign_details",
+      "params": {},
+      "block": "get_campaign_details",
+      "stack_in": [],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "436": {
+      "op": "bytec_1 // \"creator_address\"",
+      "defined_out": [
+        "\"creator_address\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"creator_address\""
+      ]
+    },
+    "437": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "438": {
+      "error": "check self.creator_address exists",
+      "op": "assert // check self.creator_address exists",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "439": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "maybe_value%0#0",
+        "0"
+      ]
+    },
+    "440": {
+      "op": "bytec_0 // \"total_donations\"",
+      "defined_out": [
+        "\"total_donations\"",
+        "0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "0",
+        "\"total_donations\""
+      ]
+    },
+    "441": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%1#0",
+        "maybe_value%0#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "442": {
+      "error": "check self.total_donations exists",
+      "op": "assert // check self.total_donations exists",
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "443": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "0"
+      ]
+    },
+    "444": {
+      "op": "bytec_2 // \"target\"",
+      "defined_out": [
+        "\"target\"",
+        "0",
+        "maybe_value%0#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "0",
+        "\"target\""
+      ]
+    },
+    "445": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%2#0",
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "maybe_exists%2#0"
+      ]
+    },
+    "446": {
+      "error": "check self.target exists",
+      "op": "assert // check self.target exists",
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0"
+      ]
+    },
+    "447": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "0"
+      ]
+    },
+    "448": {
+      "op": "bytec 4 // \"campaign_active\"",
+      "defined_out": [
+        "\"campaign_active\"",
+        "0",
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "0",
+        "\"campaign_active\""
+      ]
+    },
+    "450": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%3#0",
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0",
+        "maybe_exists%3#0"
+      ]
+    },
+    "451": {
+      "error": "check self.campaign_active exists",
+      "op": "assert // check self.campaign_active exists",
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0"
+      ]
+    },
+    "452": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "453": {
+      "subroutine": "smart_contracts.hello_world.contract.Donation.is_target_reached",
+      "params": {},
+      "block": "is_target_reached",
+      "stack_in": [],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "454": {
+      "op": "bytec_0 // \"total_donations\"",
+      "defined_out": [
+        "\"total_donations\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"total_donations\""
+      ]
+    },
+    "455": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "456": {
+      "error": "check self.total_donations exists",
+      "op": "assert // check self.total_donations exists",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "457": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "maybe_value%0#0",
+        "0"
+      ]
+    },
+    "458": {
+      "op": "bytec_2 // \"target\"",
+      "defined_out": [
+        "\"target\"",
+        "0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "0",
+        "\"target\""
+      ]
+    },
+    "459": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%1#0",
+        "maybe_value%0#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "460": {
+      "error": "check self.target exists",
+      "op": "assert // check self.target exists",
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "461": {
+      "op": "b==",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "462": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "463": {
+      "subroutine": "smart_contracts.hello_world.contract.Donation.donate",
+      "params": {
+        "donateTxn#0": "uint64"
+      },
+      "block": "donate",
+      "stack_in": [],
+      "op": "proto 1 0"
+    },
+    "466": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "467": {
+      "op": "bytec 4 // \"campaign_active\"",
+      "defined_out": [
+        "\"campaign_active\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"campaign_active\""
+      ]
+    },
+    "469": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "470": {
+      "error": "check self.campaign_active exists",
+      "op": "assert // check self.campaign_active exists",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "471": {
+      "op": "assert",
+      "stack_out": []
+    },
+    "472": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "donateTxn#0 (copy)"
+      ],
+      "stack_out": [
+        "donateTxn#0 (copy)"
+      ]
+    },
+    "474": {
+      "op": "gtxns Sender",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "476": {
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%0#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "tmp%1#0"
+      ]
+    },
+    "478": {
+      "op": "==",
+      "defined_out": [
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0"
+      ]
+    },
+    "479": {
+      "op": "assert",
+      "stack_out": []
+    },
+    "480": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "donateTxn#0 (copy)"
+      ]
+    },
+    "482": {
+      "op": "gtxns Receiver",
+      "defined_out": [
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%3#0"
+      ]
+    },
+    "484": {
+      "op": "global CurrentApplicationAddress",
+      "defined_out": [
+        "tmp%3#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%3#0",
+        "tmp%4#0"
+      ]
+    },
+    "486": {
+      "op": "==",
+      "defined_out": [
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tmp%5#0"
+      ]
+    },
+    "487": {
+      "op": "assert",
+      "stack_out": []
+    },
+    "488": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "donateTxn#0 (copy)"
+      ]
+    },
+    "490": {
+      "op": "gtxns Amount",
+      "defined_out": [
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "tmp%6#0"
+      ]
+    },
+    "492": {
+      "op": "dup",
+      "defined_out": [
+        "tmp%6#0",
+        "tmp%6#0 (copy)"
+      ],
+      "stack_out": [
+        "tmp%6#0",
+        "tmp%6#0 (copy)"
+      ]
+    },
+    "493": {
+      "op": "assert",
+      "stack_out": [
+        "tmp%6#0"
+      ]
+    },
+    "494": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "tmp%6#0",
+        "0"
+      ]
+    },
+    "495": {
+      "op": "bytec_0 // \"total_donations\"",
+      "defined_out": [
+        "\"total_donations\"",
+        "0",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "tmp%6#0",
+        "0",
+        "\"total_donations\""
+      ]
+    },
+    "496": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%1#0",
+        "maybe_value%1#0",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "tmp%6#0",
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "497": {
+      "error": "check self.total_donations exists",
+      "op": "assert // check self.total_donations exists",
+      "stack_out": [
+        "tmp%6#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "498": {
+      "op": "swap",
+      "stack_out": [
+        "maybe_value%1#0",
+        "tmp%6#0"
+      ]
+    },
+    "499": {
+      "op": "itob",
+      "defined_out": [
+        "maybe_value%1#0",
+        "tmp%9#0"
+      ],
+      "stack_out": [
+        "maybe_value%1#0",
+        "tmp%9#0"
+      ]
+    },
+    "500": {
+      "op": "b+",
+      "defined_out": [
+        "tmp%10#0"
+      ],
+      "stack_out": [
+        "tmp%10#0"
+      ]
+    },
+    "501": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "tmp%10#0",
+        "0"
+      ]
+    },
+    "502": {
+      "op": "bytec_2 // \"target\"",
+      "defined_out": [
+        "\"target\"",
+        "0",
+        "tmp%10#0"
+      ],
+      "stack_out": [
+        "tmp%10#0",
+        "0",
+        "\"target\""
+      ]
+    },
+    "503": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%2#0",
+        "maybe_value%2#0",
+        "tmp%10#0"
+      ],
+      "stack_out": [
+        "tmp%10#0",
+        "maybe_value%2#0",
+        "maybe_exists%2#0"
+      ]
+    },
+    "504": {
+      "error": "check self.target exists",
+      "op": "assert // check self.target exists",
+      "stack_out": [
+        "tmp%10#0",
+        "maybe_value%2#0"
+      ]
+    },
+    "505": {
+      "op": "dig 1",
+      "defined_out": [
+        "maybe_value%2#0",
+        "tmp%10#0",
+        "tmp%10#0 (copy)"
+      ],
+      "stack_out": [
+        "tmp%10#0",
+        "maybe_value%2#0",
+        "tmp%10#0 (copy)"
+      ]
+    },
+    "507": {
+      "op": "b>=",
+      "defined_out": [
+        "tmp%10#0",
+        "tmp%11#0"
+      ],
+      "stack_out": [
+        "tmp%10#0",
+        "tmp%11#0"
+      ]
+    },
+    "508": {
+      "op": "assert",
+      "stack_out": [
+        "tmp%10#0"
+      ]
+    },
+    "509": {
+      "op": "bytec_0 // \"total_donations\"",
+      "stack_out": [
+        "tmp%10#0",
+        "\"total_donations\""
+      ]
+    },
+    "510": {
+      "op": "swap",
+      "stack_out": [
+        "\"total_donations\"",
+        "tmp%10#0"
+      ]
+    },
+    "511": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "512": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "513": {
+      "subroutine": "smart_contracts.hello_world.contract.Donation.get_total_donations",
+      "params": {},
+      "block": "get_total_donations",
+      "stack_in": [],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "514": {
+      "op": "bytec_0 // \"total_donations\"",
+      "defined_out": [
+        "\"total_donations\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"total_donations\""
+      ]
+    },
+    "515": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "516": {
+      "error": "check self.total_donations exists",
+      "op": "assert // check self.total_donations exists",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "517": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "518": {
+      "subroutine": "smart_contracts.hello_world.contract.Donation.withdraw",
+      "params": {
+        "amount#0": "uint64"
+      },
+      "block": "withdraw",
+      "stack_in": [],
+      "op": "proto 1 0"
+    },
+    "521": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "522": {
+      "op": "bytec_1 // \"creator_address\"",
+      "defined_out": [
+        "\"creator_address\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"creator_address\""
+      ]
+    },
+    "523": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "524": {
+      "error": "check self.creator_address exists",
+      "op": "assert // check self.creator_address exists",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "525": {
+      "op": "dup"
+    },
+    "526": {
+      "op": "txn Sender",
+      "defined_out": [
+        "maybe_value%0#0",
+        "maybe_value%0#0 (copy)",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%0#0 (copy)",
+        "tmp%0#0"
+      ]
+    },
+    "528": {
+      "op": "==",
+      "defined_out": [
+        "maybe_value%0#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "tmp%1#0"
+      ]
+    },
+    "529": {
+      "op": "assert",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "530": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "maybe_value%0#0",
+        "0"
+      ]
+    },
+    "531": {
+      "op": "bytec_0 // \"total_donations\"",
+      "defined_out": [
+        "\"total_donations\"",
+        "0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "0",
+        "\"total_donations\""
+      ]
+    },
+    "532": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%1#0",
+        "maybe_value%0#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "533": {
+      "error": "check self.total_donations exists",
+      "op": "assert // check self.total_donations exists",
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "534": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "amount#0 (copy)",
+        "maybe_value%0#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "amount#0 (copy)"
+      ]
+    },
+    "536": {
+      "op": "itob",
+      "defined_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "tmp%2#0"
+      ]
+    },
+    "537": {
+      "op": "b>=",
+      "defined_out": [
+        "maybe_value%0#0",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "tmp%3#0"
+      ]
+    },
+    "538": {
+      "op": "assert",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "539": {
+      "op": "itxn_begin"
+    },
+    "540": {
+      "op": "itxn_field Receiver",
+      "stack_out": []
+    },
+    "542": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "amount#0 (copy)"
+      ]
+    },
+    "544": {
+      "op": "itxn_field Amount",
+      "stack_out": []
+    },
+    "546": {
+      "op": "intc_1 // pay",
+      "defined_out": [
+        "pay"
+      ],
+      "stack_out": [
+        "pay"
+      ]
+    },
+    "547": {
+      "op": "itxn_field TypeEnum",
+      "stack_out": []
+    },
+    "549": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "0"
+      ]
+    },
+    "550": {
+      "op": "itxn_field Fee",
+      "stack_out": []
+    },
+    "552": {
+      "op": "itxn_submit"
+    },
+    "553": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "554": {
+      "subroutine": "smart_contracts.hello_world.contract.Donation.get_remaining_target",
+      "params": {},
+      "block": "get_remaining_target",
+      "stack_in": [],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "555": {
+      "op": "bytec_2 // \"target\"",
+      "defined_out": [
+        "\"target\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"target\""
+      ]
+    },
+    "556": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "557": {
+      "error": "check self.target exists",
+      "op": "assert // check self.target exists",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "558": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "maybe_value%0#0",
+        "0"
+      ]
+    },
+    "559": {
+      "op": "bytec_0 // \"total_donations\"",
+      "defined_out": [
+        "\"total_donations\"",
+        "0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "0",
+        "\"total_donations\""
+      ]
+    },
+    "560": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%1#0",
+        "maybe_value%0#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "561": {
+      "error": "check self.total_donations exists",
+      "op": "assert // check self.total_donations exists",
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "562": {
+      "op": "b-",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "563": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "564": {
+      "subroutine": "smart_contracts.hello_world.contract.Donation.update_details",
+      "params": {
+        "target#0": "bytes",
+        "wallet#0": "bytes"
+      },
+      "block": "update_details",
+      "stack_in": [],
+      "op": "proto 2 0"
+    },
+    "567": {
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "569": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0"
+      ]
+    },
+    "570": {
+      "op": "bytec_1 // \"creator_address\"",
+      "defined_out": [
+        "\"creator_address\"",
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0",
+        "\"creator_address\""
+      ]
+    },
+    "571": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "572": {
+      "error": "check self.creator_address exists",
+      "op": "assert // check self.creator_address exists",
+      "stack_out": [
+        "tmp%0#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "573": {
+      "op": "==",
+      "defined_out": [
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%1#0"
+      ]
+    },
+    "574": {
+      "op": "assert",
+      "stack_out": []
+    },
+    "575": {
+      "op": "bytec_1 // \"creator_address\"",
+      "stack_out": [
+        "\"creator_address\""
+      ]
+    },
+    "576": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "\"creator_address\"",
+        "wallet#0 (copy)"
+      ],
+      "stack_out": [
+        "\"creator_address\"",
+        "wallet#0 (copy)"
+      ]
+    },
+    "578": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "579": {
+      "op": "bytec_2 // \"target\"",
+      "defined_out": [
+        "\"target\""
+      ],
+      "stack_out": [
+        "\"target\""
+      ]
+    },
+    "580": {
+      "op": "frame_dig -2",
+      "defined_out": [
+        "\"target\"",
+        "target#0 (copy)"
+      ],
+      "stack_out": [
+        "\"target\"",
+        "target#0 (copy)"
+      ]
+    },
+    "582": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "583": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "584": {
+      "subroutine": "smart_contracts.hello_world.contract.Donation.delete",
+      "params": {},
+      "block": "delete",
+      "stack_in": [],
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "586": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0"
+      ]
+    },
+    "587": {
+      "op": "bytec_1 // \"creator_address\"",
+      "defined_out": [
+        "\"creator_address\"",
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0",
+        "\"creator_address\""
+      ]
+    },
+    "588": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "589": {
+      "error": "check self.creator_address exists",
+      "op": "assert // check self.creator_address exists",
+      "stack_out": [
+        "tmp%0#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "590": {
+      "op": "swap",
+      "stack_out": [
+        "maybe_value%0#0",
+        "tmp%0#0"
+      ]
+    },
+    "591": {
+      "op": "dig 1",
+      "defined_out": [
+        "maybe_value%0#0",
+        "maybe_value%0#0 (copy)",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "tmp%0#0",
+        "maybe_value%0#0 (copy)"
+      ]
+    },
+    "593": {
+      "op": "==",
+      "defined_out": [
+        "maybe_value%0#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "tmp%1#0"
+      ]
+    },
+    "594": {
+      "op": "assert",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "595": {
+      "op": "itxn_begin"
+    },
+    "596": {
+      "op": "dup",
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%0#0 (copy)"
+      ]
+    },
+    "597": {
+      "op": "itxn_field CloseRemainderTo",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "599": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "maybe_value%0#0",
+        "0"
+      ]
+    },
+    "600": {
+      "op": "itxn_field Amount",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "602": {
+      "op": "itxn_field Receiver",
+      "stack_out": []
+    },
+    "604": {
+      "op": "intc_1 // pay",
+      "defined_out": [
+        "pay"
+      ],
+      "stack_out": [
+        "pay"
+      ]
+    },
+    "605": {
+      "op": "itxn_field TypeEnum",
+      "stack_out": []
+    },
+    "607": {
+      "op": "pushint 1000 // 1000",
+      "defined_out": [
+        "1000"
+      ],
+      "stack_out": [
+        "1000"
+      ]
+    },
+    "610": {
+      "op": "itxn_field Fee",
+      "stack_out": []
+    },
+    "612": {
+      "op": "itxn_submit"
+    },
+    "613": {
+      "retsub": true,
+      "op": "retsub"
+    }
+  }
+}
