@@ -28,4 +28,9 @@ class Donation(ARC4Contract):
         return self.creator_address, self.total_donations, self.target, self.campaign_active
 
 
+    @abimethod()
+    def is_target_reached(self) -> bool:
+        return self.total_donations == self.target
+
+
 
