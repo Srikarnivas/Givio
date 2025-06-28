@@ -87,5 +87,5 @@ function removeTier(uint256 _index) public onlyOwner {
         require(_index < tiers.length, "Tier does not exist.");
         tiers[_index] = tiers[tiers.length -1];
         tiers.pop();
-    
+}
 
