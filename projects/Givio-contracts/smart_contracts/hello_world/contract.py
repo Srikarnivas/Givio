@@ -40,7 +40,6 @@ contract Crowdfunding {
         require(!paused, "Contract is paused.");
         _;
     }
-
     constructor(
         address _owner,
         string memory _name,
@@ -48,3 +47,10 @@ contract Crowdfunding {
         uint256 _goal,
         uint256 _duratyionInDays
     ) {
+        name = _name;
+        description = _description;
+        goal = _goal;
+        deadline = block.timestamp + (_duratyionInDays * 1 days);
+        owner = _owner;
+        state = CampaignState.Active;
+    }
