@@ -20,3 +20,7 @@ contract Crowdfunding {
         uint256 amount;
         uint256 backers;
     }
+    struct Backer {
+        uint256 totalContribution;
+        mapping(uint256 => bool) fundedTiers;
+    }
