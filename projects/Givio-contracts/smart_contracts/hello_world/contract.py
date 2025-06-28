@@ -74,3 +74,11 @@ contract Crowdfunding {
 
         checkAndUpdateCampaignState();
     }
+
+    function addTier(
+        string memory _name,
+        uint256 _amount
+    ) public onlyOwner {
+        require(_amount > 0, "Amount must be greater than 0.");
+        tiers.push(Tier(_name, _amount, 0));
+    }
