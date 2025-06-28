@@ -4,134 +4,75 @@ from algopy.arc4 import abimethod
 
 
 
-contract Crowdfunding {
-    string public name;
-    string public description;
-    uint256 public goal;
-    uint256 public deadline;
-    address public owner;
-    bool public paused;
+class Donation(ARC4Contract):
+    creator_address : Account
+    total_donations : BigUInt
+    target : BigUInt
+    campaign_active: bool
 
-    enum CampaignState { Active, Successful, Failed }
-    CampaignState public state;
+    @abimethod(allow_actions=["NoOp"], create="require")
+    def create(self, target: BigUInt, status: bool) -> None:
+        assert target > 0
+        self.creator_address = Txn.sender
+        self.total_donations = BigUInt(0)
+        self.target = target
+        self.campaign_active = status
+    
+    @abimethod()
+    def toggle_campaign(self, status: bool) -> None:
+        assert Txn.sender == self.creator_address
+        self.campaign_active = status
 
-    struct Tier {
-        string name;
-        uint256 amount;
-        uint256 backers;
-    }
-    struct Backer {
-        uint256 totalContribution;
-        mapping(uint256 => bool) fundedTiers;
-    }
-    Tier[] public tiers;
-    mapping(address => Backer) public backers;
-    modifier onlyOwner() {
-        require(msg.sender == owner, "Not the owner");
-        _;
-    }
+    @abimethod()
+    def get_campaign_details(self) -> tuple[Account, BigUInt, BigUInt, bool]:
+        return self.creator_address, self.total_donations, self.target, self.campaign_active
 
-    modifier campaignOpen() {
-        require(state == CampaignState.Active, "Campaign is not active.");
-        _;
-    }
+    @abimethod()
+    def is_target_reached(self) -> bool:
+        return self.total_donations == self.target
 
-    modifier notPaused() {
-        require(!paused, "Contract is paused.");
-        _;
-    }
-    constructor(
-        address _owner,
-        string memory _name,
-        string memory _description,
-        uint256 _goal,
-        uint256 _duratyionInDays
-    ) {
-        name = _name;
-        description = _description;
-        goal = _goal;
-        deadline = block.timestamp + (_duratyionInDays * 1 days);
-        owner = _owner;
-        state = CampaignState.Active;
-    }
+    @abimethod()
+    def donate(self, donateTxn: gtxn.PaymentTransaction ) -> None:
+        assert self.campaign_active
+        assert donateTxn.sender == Txn.sender
+        assert donateTxn.receiver == Global.current_application_address
+        assert donateTxn.amount > 0
+        assert self.total_donations+donateTxn.amount <= self.target
 
-    function checkAndUpdateCampaignState() internal {
-        if(state == CampaignState.Active) {
-            if(block.timestamp >= deadline) {
-                state = address(this).balance >= goal ? CampaignState.Successful : CampaignState.Failed;            
-            } else {
-                state = address(this).balance >= goal ? CampaignState.Successful : CampaignState.Active;
-            }
-        }
-    }
-        function fund(uint256 _tierIndex) public payable campaignOpen notPaused {
-        require(_tierIndex < tiers.length, "Invalid tier.");
-        require(msg.value == tiers[_tierIndex].amount, "Incorrect amount.");
+        self.total_donations += donateTxn.amount
+    
+    @abimethod()
+    def get_total_donations(self) -> BigUInt:
+        return self.total_donations
+    
+    @abimethod()
+    def withdraw(self, amount: BigUInt) -> None:
+        assert self.creator_address == Txn.sender
+        assert self.total_donations >= amount
+        itxn.Payment(
+            amount = amount,
+            receiver= self.creator_address,
+            fee = 0
+        ).submit()
+        
+    @abimethod()
+    def get_remaining_target(self) -> BigUInt:
+        return self.target - self.total_donations
 
-        tiers[_tierIndex].backers++;
-        backers[msg.sender].totalContribution += msg.value;
-        backers[msg.sender].fundedTiers[_tierIndex] = true;
+    
+    @abimethod
+    def update_details(self, target: BigUInt, wallet: Account) -> None:
+        assert Txn.sender == self.creator_address
+        self.creator_address = wallet
+        self.target = target
+    
+    @abimethod(allow_actions=["DeleteApplication"])
+    def delete(self) -> None:
+        assert Txn.sender == self.creator_address
 
-        checkAndUpdateCampaignState();
-    }
-
-    function addTier(
-        string memory _name,
-        uint256 _amount
-    ) public onlyOwner {
-        require(_amount > 0, "Amount must be greater than 0.");
-        tiers.push(Tier(_name, _amount, 0));
-    }
-
-function removeTier(uint256 _index) public onlyOwner {
-        require(_index < tiers.length, "Tier does not exist.");
-        tiers[_index] = tiers[tiers.length -1];
-        tiers.pop();
-}
-        function withdraw() public onlyOwner {
-        checkAndUpdateCampaignState();
-        require(state == CampaignState.Successful, "Campaign not successful.");
-
-        uint256 balance = address(this).balance;
-        require(balance > 0, "No balance to withdraw");
-
-        payable(owner).transfer(balance);
-    }
-
-    function getContractBalance() public view returns (uint256) {
-        return address(this).balance;
-    }
-
-        function refund() public {
-        checkAndUpdateCampaignState();
-        require(state == CampaignState.Failed, "Refunds not available.");
-        uint256 amount = backers[msg.sender].totalContribution;
-        require(amount > 0, "No contribution to refund");
-
-        backers[msg.sender].totalContribution = 0;
-        payable(msg.sender).transfer(amount);
-    }
-
-    function hasFundedTier(address _backer, uint256 _tierIndex) public view returns (bool) {
-        return backers[_backer].fundedTiers[_tierIndex];
-    }
-
-    function getTiers() public view returns (Tier[] memory) {
-        return tiers;
-    }
-
-    function togglePause() public onlyOwner {
-        paused = !paused;
-    }
-
-    function getCampaignStatus() public view returns (CampaignState) {
-        if (state == CampaignState.Active && block.timestamp > deadline) {
-            return address(this).balance >= goal ? CampaignState.Successful : CampaignState.Failed;
-        }
-        return state;
-    }
-
-       function extendDeadline(uint256 _daysToAdd) public onlyOwner campaignOpen {
-        deadline += _daysToAdd * 1 days;
-    }
-}
+        itxn.Payment(
+            receiver= self.creator_address,
+            amount = 0,
+            close_remainder_to= self.creator_address,
+            fee= 1_000,
+        ).submit()
