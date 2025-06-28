@@ -24,3 +24,5 @@ contract Crowdfunding {
         uint256 totalContribution;
         mapping(uint256 => bool) fundedTiers;
     }
+    Tier[] public tiers;
+    mapping(address => Backer) public backers;
