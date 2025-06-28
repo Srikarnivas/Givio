@@ -64,3 +64,10 @@ contract Crowdfunding {
             }
         }
     }
+    function fund(uint256 _tierIndex) public payable campaignOpen notPaused {
+        require(_tierIndex < tiers.length, "Invalid tier.");
+        require(msg.value == tiers[_tierIndex].amount, "Incorrect amount.");
+
+        tiers[_tierIndex].backers++;
+        backers[msg.sender].totalContribution += msg.value;
+        backers[msg.sender].fundedTiers[_tierIndex] = true;
