@@ -88,8 +88,12 @@ function removeTier(uint256 _index) public onlyOwner {
         tiers[_index] = tiers[tiers.length -1];
         tiers.pop();
 }
-    function withdraw() public onlyOwner {
+        function withdraw() public onlyOwner {
         checkAndUpdateCampaignState();
         require(state == CampaignState.Successful, "Campaign not successful.");
 
         uint256 balance = address(this).balance;
+        require(balance > 0, "No balance to withdraw");
+
+        payable(owner).transfer(balance);
+    }
