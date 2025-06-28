@@ -15,9 +15,8 @@ contract Crowdfunding {
     enum CampaignState { Active, Successful, Failed }
     CampaignState public state;
 
-        itxn.Payment(
-            receiver= self.creator_address,
-            amount = 0,
-            close_remainder_to= self.creator_address,
-            fee= 1_000,
-        ).submit()
+    struct Tier {
+        string name;
+        uint256 amount;
+        uint256 backers;
+    }
