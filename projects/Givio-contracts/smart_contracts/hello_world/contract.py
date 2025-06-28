@@ -111,3 +111,7 @@ function removeTier(uint256 _index) public onlyOwner {
         backers[msg.sender].totalContribution = 0;
         payable(msg.sender).transfer(amount);
     }
+
+    function hasFundedTier(address _backer, uint256 _tierIndex) public view returns (bool) {
+        return backers[_backer].fundedTiers[_tierIndex];
+    }
