@@ -119,3 +119,7 @@ function removeTier(uint256 _index) public onlyOwner {
     function getTiers() public view returns (Tier[] memory) {
         return tiers;
     }
+
+    function togglePause() public onlyOwner {
+        paused = !paused;
+    }
