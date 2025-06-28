@@ -115,3 +115,7 @@ function removeTier(uint256 _index) public onlyOwner {
     function hasFundedTier(address _backer, uint256 _tierIndex) public view returns (bool) {
         return backers[_backer].fundedTiers[_tierIndex];
     }
+
+    function getTiers() public view returns (Tier[] memory) {
+        return tiers;
+    }
