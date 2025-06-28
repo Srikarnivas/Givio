@@ -97,3 +97,7 @@ function removeTier(uint256 _index) public onlyOwner {
 
         payable(owner).transfer(balance);
     }
+
+    function getContractBalance() public view returns (uint256) {
+        return address(this).balance;
+    }
