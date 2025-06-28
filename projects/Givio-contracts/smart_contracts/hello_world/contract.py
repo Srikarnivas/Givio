@@ -54,3 +54,13 @@ contract Crowdfunding {
         owner = _owner;
         state = CampaignState.Active;
     }
+
+    function checkAndUpdateCampaignState() internal {
+        if(state == CampaignState.Active) {
+            if(block.timestamp >= deadline) {
+                state = address(this).balance >= goal ? CampaignState.Successful : CampaignState.Failed;            
+            } else {
+                state = address(this).balance >= goal ? CampaignState.Successful : CampaignState.Active;
+            }
+        }
+    }
