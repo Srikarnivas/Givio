@@ -101,3 +101,9 @@ function removeTier(uint256 _index) public onlyOwner {
     function getContractBalance() public view returns (uint256) {
         return address(this).balance;
     }
+
+    function refund() public {
+        checkAndUpdateCampaignState();
+        require(state == CampaignState.Failed, "Refunds not available.");
+        uint256 amount = backers[msg.sender].totalContribution;
+        require(amount > 0, "No contribution to refund");
