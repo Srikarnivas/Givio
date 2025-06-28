@@ -4,11 +4,13 @@ from algopy.arc4 import abimethod
 
 
 
-class Donation(ARC4Contract):
-    creator_address : Account
-    total_donations : BigUInt
-    target : BigUInt
-    campaign_active: bool
+contract Crowdfunding {
+    string public name;
+    string public description;
+    uint256 public goal;
+    uint256 public deadline;
+    address public owner;
+    bool public paused;
 
     @abimethod(allow_actions=["NoOp"], create="require")
     def create(self, target: BigUInt, status: bool) -> None:
