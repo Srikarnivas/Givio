@@ -130,3 +130,6 @@ function removeTier(uint256 _index) public onlyOwner {
         }
         return state;
     }
+
+    function extendDeadline(uint256 _daysToAdd) public onlyOwner campaignOpen {
+        deadline += _daysToAdd * 1 days;
