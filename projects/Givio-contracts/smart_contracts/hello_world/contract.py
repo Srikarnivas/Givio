@@ -35,3 +35,8 @@ contract Crowdfunding {
         require(state == CampaignState.Active, "Campaign is not active.");
         _;
     }
+
+    modifier notPaused() {
+        require(!paused, "Contract is paused.");
+        _;
+    }
