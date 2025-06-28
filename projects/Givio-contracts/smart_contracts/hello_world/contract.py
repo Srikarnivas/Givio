@@ -40,3 +40,11 @@ contract Crowdfunding {
         require(!paused, "Contract is paused.");
         _;
     }
+
+    constructor(
+        address _owner,
+        string memory _name,
+        string memory _description,
+        uint256 _goal,
+        uint256 _duratyionInDays
+    ) {
