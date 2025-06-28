@@ -30,3 +30,8 @@ contract Crowdfunding {
         require(msg.sender == owner, "Not the owner");
         _;
     }
+
+    modifier campaignOpen() {
+        require(state == CampaignState.Active, "Campaign is not active.");
+        _;
+    }
