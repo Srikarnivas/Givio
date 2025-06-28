@@ -12,65 +12,8 @@ contract Crowdfunding {
     address public owner;
     bool public paused;
 
-    @abimethod(allow_actions=["NoOp"], create="require")
-    def create(self, target: BigUInt, status: bool) -> None:
-        assert target > 0
-        self.creator_address = Txn.sender
-        self.total_donations = BigUInt(0)
-        self.target = target
-        self.campaign_active = status
-    
-    @abimethod()
-    def toggle_campaign(self, status: bool) -> None:
-        assert Txn.sender == self.creator_address
-        self.campaign_active = status
-
-    @abimethod()
-    def get_campaign_details(self) -> tuple[Account, BigUInt, BigUInt, bool]:
-        return self.creator_address, self.total_donations, self.target, self.campaign_active
-
-    @abimethod()
-    def is_target_reached(self) -> bool:
-        return self.total_donations == self.target
-
-    @abimethod()
-    def donate(self, donateTxn: gtxn.PaymentTransaction ) -> None:
-        assert self.campaign_active
-        assert donateTxn.sender == Txn.sender
-        assert donateTxn.receiver == Global.current_application_address
-        assert donateTxn.amount > 0
-        assert self.total_donations+donateTxn.amount <= self.target
-
-        self.total_donations += donateTxn.amount
-    
-    @abimethod()
-    def get_total_donations(self) -> BigUInt:
-        return self.total_donations
-    
-    @abimethod()
-    def withdraw(self, amount: BigUInt) -> None:
-        assert self.creator_address == Txn.sender
-        assert self.total_donations >= amount
-        itxn.Payment(
-            amount = amount,
-            receiver= self.creator_address,
-            fee = 0
-        ).submit()
-        
-    @abimethod()
-    def get_remaining_target(self) -> BigUInt:
-        return self.target - self.total_donations
-
-    
-    @abimethod
-    def update_details(self, target: BigUInt, wallet: Account) -> None:
-        assert Txn.sender == self.creator_address
-        self.creator_address = wallet
-        self.target = target
-    
-    @abimethod(allow_actions=["DeleteApplication"])
-    def delete(self) -> None:
-        assert Txn.sender == self.creator_address
+    enum CampaignState { Active, Successful, Failed }
+    CampaignState public state;
 
         itxn.Payment(
             receiver= self.creator_address,
