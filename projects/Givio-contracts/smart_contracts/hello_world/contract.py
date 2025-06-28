@@ -123,3 +123,10 @@ function removeTier(uint256 _index) public onlyOwner {
     function togglePause() public onlyOwner {
         paused = !paused;
     }
+
+    function getCampaignStatus() public view returns (CampaignState) {
+        if (state == CampaignState.Active && block.timestamp > deadline) {
+            return address(this).balance >= goal ? CampaignState.Successful : CampaignState.Failed;
+        }
+        return state;
+    }
