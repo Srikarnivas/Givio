@@ -26,3 +26,7 @@ contract Crowdfunding {
     }
     Tier[] public tiers;
     mapping(address => Backer) public backers;
+    modifier onlyOwner() {
+        require(msg.sender == owner, "Not the owner");
+        _;
+    }
